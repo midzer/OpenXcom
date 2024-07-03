@@ -69,7 +69,7 @@
 #include <sys/param.h>
 #include <sys/types.h>
 #include <pwd.h>
-#include <execinfo.h>
+//#include <execinfo.h>
 #include <cxxabi.h>
 #include <dlfcn.h>
 #include "Unicode.h"
@@ -345,7 +345,7 @@ std::string findConfigFolder()
 	else
 	{
 		snprintf(path, MAXPATHLEN, "%s/.config/openxcom/", home);
-		return path;
+		return "./";
 	}
 #endif
 }
@@ -1051,7 +1051,7 @@ void stackTrace(void *ctx)
 #else
 	void *frames[32];
 	char buf[1024];
-	int  frame_count = backtrace(frames, 32);
+	int  frame_count = 0;//backtrace(frames, 32);
 	char *demangled = NULL;
 	const char *mangled = NULL;
 	int status;

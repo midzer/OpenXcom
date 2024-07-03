@@ -20,7 +20,7 @@
 #include <vector>
 #include <string>
 #include <yaml-cpp/yaml.h>
-#include <SDL_video.h>
+#include <SDL_rect.h>
 #include "MapBlock.h"
 
 namespace OpenXcom

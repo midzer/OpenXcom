@@ -66,7 +66,7 @@ void Sound::load(const void *data, unsigned int size)
 	_sound = Mix_LoadWAV_RW(rw, 1);
 	if (_sound == 0)
 	{
-		throw Exception(Mix_GetError());
+		//throw Exception(Mix_GetError());
 	}
 }
 
